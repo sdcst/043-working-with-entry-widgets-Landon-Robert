@@ -13,7 +13,7 @@ we had better learn how to send and receive data from some of the
 widgets.
 
 Today, we will be looking at creating our first event driven programs
-that use the command option for button widgets.  This allows us to have
+that use the command option for button widgets. This allows us to have
 the program execute specific code when the button is clicked.
 
 Some of the code that we will be executing today involves retrieving
