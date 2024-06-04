@@ -10,13 +10,14 @@ Create a button so that when they click on the button, it states all of the info
 import tkinter as tk
 win = tk.Tk()
 
-def run():
+def run(e):
     name = NameData.get()
     number = NumberData.get()
     grade = GradeData.get()
-    total = name + number + grade
+    total = "Name = " + name + " Number = " +number + " grade = " + grade
     TotalData = total
-    Result = TotalData.config(text = TotalData)
+    Result.delete(0,tk.END)
+    Result.insert(0, TotalData)
 
 NameData = tk.StringVar()
 NumberData = tk.StringVar()
@@ -30,7 +31,7 @@ l1 = tk.Label(win,text="Name")
 l2 = tk.Label(win,text="Number")
 l3 = tk.Label(win,text="Grade")
 b1 = tk.Button(win,text="Click")
-Result = tk.Entry(win,width=15,textvariable=TotalData)
+Result = tk.Entry(win,width=50,textvariable=TotalData)
 
 b1.bind("<Button-1>",run)
 
