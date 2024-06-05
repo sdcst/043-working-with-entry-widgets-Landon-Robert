@@ -14,7 +14,7 @@ def run(e):
     name = NameData.get()
     number = NumberData.get()
     grade = GradeData.get()
-    total = "Name = " + name + " Number = " +number + " grade = " + grade
+    total = "Name = " + name + ", Number = " + number + ", Grade = " + grade
     TotalData = total
     Result.delete(0,tk.END)
     Result.insert(0, TotalData)

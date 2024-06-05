@@ -7,14 +7,15 @@ When the button is clicked, calculate the length of the hypotenuse and display i
 Any labels you need for instruction are optional.
 """
 import tkinter as tk
+import math
 win = tk.Tk()
 
 def run(e):
-    Number1 = Box1.get()
-    Number2 = Box2.get()
-    total = (int(Number1)**2 + int(Number2)**2)**0.5
+    Number1 = Number1Data.get()
+    Number2 = Number2Data.get()
+    total = (float(Number1)**2 + float(Number2)**2)**0.5
     
-    Result.delete(0,tk.END)
+    Result.delete(0, tk.END)
     Result.insert(0, total)
 
 Number1Data = tk.IntVar()
@@ -24,11 +25,12 @@ TotalData = tk.IntVar()
 l1 = tk.Label(win,text="Number1")
 l2 = tk.Label(win,text="Number2")
 l3 = tk.Label(win,text="Hypotenuse: ")
-Box1 = tk.Entry(win,width=15,textvariable = Number1Data)
-Box2 = tk.Entry(win,width=15,textvariable = Number2Data)
+Box1 = tk.Entry(win,width=15,textvariable=Number1Data)
+Box2 = tk.Entry(win,width=15,textvariable=Number2Data)
 b1 = tk.Button(win,text="Hyp")
 Result = tk.Entry(win,width=50,textvariable=TotalData)
 
+b1.bind("<Button-1>",run)
 
 l1.pack()
 Box1.pack()
